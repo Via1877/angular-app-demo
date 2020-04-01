@@ -1,0 +1,11 @@
+<p>post works!</p>
+<h2>{{ title }}</h2>
+<ul>
+    <li *ngFor="let item of list; index as i">
+        <h4>
+            <a href="" title="{{ item.name }}" [textContent]="item.name"></a>
+        </h4>
+        <p *ngIf="item.des">{{ item.des }}</p>
+        <button (click)="removeItem(i)">remove</button>
+    </li>
+</ul>
